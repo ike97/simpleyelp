@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content" android:layout_margin="8dp">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName" tools:text="Hartley's"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toEndOf="@+id/imageView"
+            android:layout_marginStart="8dp" android:textStyle="bold" android:textSize="20sp"/>
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp" tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+    />
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small" android:numStars="5" android:rating="4.5"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNumReviews" android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNumReviews" tools:text="21 reviews" app:layout_constraintStart_toEndOf="@+id/ratingBar"
+            android:layout_marginStart="4dp" app:layout_constraintBaseline_toBaselineOf="@+id/ratingBar"
+            android:textColor="@android:color/darker_gray"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/tvAddress" tools:text="41 Kenmare St"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/tvName"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCategory" tools:text="Breakfast"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+            app:layout_constraintStart_toStartOf="@+id/tvName" android:textColor="@android:color/darker_gray"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDistance" tools:text="122 mi"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:textColor="@android:color/darker_gray"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPrice" tools:text="$$"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/tvDistance"
+            app:layout_constraintEnd_toEndOf="@+id/tvDistance" android:textColor="@android:color/darker_gray"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
